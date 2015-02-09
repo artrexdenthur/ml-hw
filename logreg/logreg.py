@@ -57,7 +57,7 @@ class LogReg:
         :param mu: Regularization parameter
         :param step: A function that takes the iteration as an argument (the default is a constant value)
         """
-        
+
         self.beta = zeros(num_features)
         self.mu = mu
         self.step = step
@@ -132,6 +132,7 @@ def read_dataset(positive, negative, vocab, test_proportion=.1):
     random.shuffle(test)
 
     return train, test, vocab
+
 
 def step_update(iteration):
     # TODO (extra credit): Update this function to provide an
